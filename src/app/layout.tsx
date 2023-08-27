@@ -1,10 +1,14 @@
 import Header from "@/components/Header";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Serif_KR } from "next/font/google";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const notoSerifKR = Noto_Serif_KR({
+  weight: ["200", "300", "400", "500", "600"],
+  display: "auto",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Fabbro 블로그",
@@ -17,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={inter.className}>
+    <html lang="ko" className={notoSerifKR.className}>
       <body className="flex flex-col">
         <Header />
         <main className="flex-grow">{children}</main>
