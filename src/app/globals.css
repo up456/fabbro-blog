@@ -21,3 +21,10 @@ body {
   height: 100vh;
   overflow-y: auto;
 }
+
+@media (max-width: 768px) {
+  html,
+  body {
+    height: auto;
+  }
+}

@@ -7,7 +7,7 @@ const diphylleia = Diphylleia({ subsets: ["latin"], weight: ["400"] });
 function Header() {
   return (
     <header
-      className={`${diphylleia.className} sticky top-0 flex justify-between items-center p-4`}
+      className={`${diphylleia.className} sticky top-0 flex justify-between items-center p-4 z-50`}
     >
       <Link href="/">
         <h1 className="text-3xl font-bold">{"파브로 대장간"}</h1>
