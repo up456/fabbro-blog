@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className={notoSerifKR.className}>
-      <body className="flex flex-col">
+      <body className="flex flex-col max-w-7xl mx-auto">
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
