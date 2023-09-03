@@ -1,7 +1,12 @@
+import Preparing from "@/components/Preparing";
 import React from "react";
 
 function ArmoryPage() {
-  return <div>ArmoryPage</div>;
+  return (
+    <>
+      <Preparing />
+    </>
+  );
 }
 
 export default ArmoryPage;
