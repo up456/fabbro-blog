@@ -1,0 +1,12 @@
+/* .cardContainer {
+  perspective: 4000px;
+}
+
+.card {
+  transition: 1000ms;
+  transform-origin: 0%;
+  background-color: pink;
+}
+.card:hover {
+  transform: rotateY(-90deg);
+} */

@@ -1,0 +1,23 @@
+[
+  {
+    "title": "망치 사용방법",
+    "description": "망치 사용방법 총정리",
+    "date": "2021-12-31",
+    "category": "장비",
+    "path": "dummy1"
+  },
+  {
+    "title": "무기를 더 단단하게 하는 방법",
+    "description": "강화하는 방법에 대한 최종정리",
+    "date": "2022-05-08",
+    "category": "강화",
+    "path": "dummy2"
+  },
+  {
+    "title": "철과 불의 속성",
+    "description": "철과 불의 성질에 대한 이해와 활용",
+    "date": "2022-06-15",
+    "category": "물질 특성",
+    "path": "dummy3"
+  }
+]
