@@ -1,17 +1,19 @@
 import { Post } from "@/service/posts";
+import { data } from "autoprefixer";
 import Image from "next/image";
 import Link from "next/link";
 
 type Props = { post: Post };
 export default function PostCard({
-  post: { title, description, date, category, path },
+  post: { title, description, date, category },
 }: Props) {
+  const postYear = date.toString().slice(0, 4);
   return (
-    <Link href={`/posts/${path}`}>
+    <Link href={`/posts/${postYear}-${title}`}>
       <article className="rounded-md overflow-hidden shadow-md hover:shadow-xl">
         <Image
           className="w-full h-[260px] object-cover"
-          src={`/images/posts/${path}.jpg`}
+          src={`/images/posts/${postYear}/${title}/thumbnail.jpg`}
           alt={title}
           width={300}
           height={200}

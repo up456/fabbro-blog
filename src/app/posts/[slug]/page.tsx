@@ -9,13 +9,20 @@ type Props = {
   };
 };
 export default async function PostPage({ params: { slug } }: Props) {
-  const { title, description, date, path, content } = await getPostData(slug);
+  const decodedUrl = decodeURIComponent(slug).split("-");
+  const urlPath = decodedUrl[1];
+  const postYear = decodedUrl[0];
+
+  const { title, description, date, content } = await getPostData(
+    urlPath,
+    postYear
+  );
 
   return (
     <article className="rounded-2xl overflow-hidden bg-gray-100 shadow-lg m-4">
       <Image
         className="w-full h-1/5 max-h-[500px]"
-        src={`/images/posts/${path}.jpg`}
+        src={`/images/posts/${postYear}/${title}/thumbnail.jpg`}
         alt={title}
         width={1000}
         height={420}
