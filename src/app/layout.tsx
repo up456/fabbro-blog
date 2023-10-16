@@ -1,8 +1,8 @@
-import Header from "@/components/Header";
+import Header from "@/components/Layout/Header";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Noto_Serif_KR } from "next/font/google";
-import Footer from "@/components/Footer";
+import Footer from "@/components/Layout/Footer";
 
 const notoSerifKR = Noto_Serif_KR({
   weight: ["200", "300", "400", "500", "600"],

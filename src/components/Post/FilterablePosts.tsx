@@ -1,21 +1,20 @@
 "use client";
-import { Post } from "@/service/posts";
 import { useState } from "react";
 import Categories from "./Categories";
 import PostsGrid from "./PostsGrid";
 
 type Props = {
-  posts: Post[];
+  posts: BlogMetadata[];
   categories: string[];
 };
 const ALL_POSTS = "모두 보기";
 
 export default function FilterablePosts({ posts, categories }: Props) {
-  const [selected, setSelected] = useState(ALL_POSTS);
+  const [selectedCategory, setSelectedCategory] = useState(ALL_POSTS);
   const filtered =
-    selected === ALL_POSTS
+    selectedCategory === ALL_POSTS
       ? posts
-      : posts.filter((post) => post.category === selected);
+      : posts.filter((post) => post.category.includes(selectedCategory));
 
   return (
     <section className="flex m-4">
@@ -23,8 +22,8 @@ export default function FilterablePosts({ posts, categories }: Props) {
       <aside className="basis-[25%] max-w-[250px]">
         <Categories
           categories={[ALL_POSTS, ...categories]}
-          selected={selected}
-          onClick={setSelected}
+          selected={selectedCategory}
+          onClick={setSelectedCategory}
         />
       </aside>
     </section>
