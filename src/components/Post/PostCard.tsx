@@ -21,9 +21,16 @@ export default function PostCard({
           <time className="self-end text-gray-700">{date.toString()}</time>
           <h3 className="text-lg font-bold">{title}</h3>
           <p className="w-full truncate text-center">{description}</p>
-          <span className="text-sm rounded-lg text-orange-950 bg-orange-100 px-2 py-0.5 my-2">
-            {category}
-          </span>
+          <div className="flex gap-2">
+            {category.map((it) => (
+              <span
+                key={it}
+                className="text-sm rounded-lg text-orange-950 bg-orange-100 px-2 py-0.5 my-2"
+              >
+                {it}
+              </span>
+            ))}
+          </div>
         </div>
       </article>
     </Link>
