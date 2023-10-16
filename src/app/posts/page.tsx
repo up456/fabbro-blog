@@ -1,4 +1,4 @@
-import FilterablePosts from "@/components/FilterablePosts";
+import FilterablePosts from "@/components/Post/FilterablePosts";
 import { getAllPosts } from "@/service/posts";
 
 export default async function PostsPage() {
