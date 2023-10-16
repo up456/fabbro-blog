@@ -3,7 +3,6 @@ declare type BlogMetadata = {
   description: string;
   date: string;
   category: string[];
-  featured: boolean;
 };
 
 declare type BlogMetadataWithContent = BlogMetadata & {

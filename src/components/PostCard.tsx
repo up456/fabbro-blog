@@ -1,9 +1,8 @@
-import { Post } from "@/service/posts";
 import { data } from "autoprefixer";
 import Image from "next/image";
 import Link from "next/link";
 
-type Props = { post: Post };
+type Props = { post: BlogMetadata };
 export default function PostCard({
   post: { title, description, date, category },
 }: Props) {
