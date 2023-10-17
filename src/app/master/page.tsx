@@ -3,7 +3,7 @@ import React from "react";
 
 function MasterPage() {
   return (
-    <div>
+    <section className="bg-[#faf4ef] h-full">
       <Image
         className="lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:translate-x-[-50%] lg:translate-y-[-50%] m-auto"
         src="/images/common/master.png"
@@ -11,7 +11,7 @@ function MasterPage() {
         width={332}
         height={751}
       />
-      <div className="lg:absolute lg:top-1/4 lg:left-[10vw] p-7 font-bold">
+      <div className="lg:absolute lg:top-1/4 lg:left-[13vw] p-7 font-bold">
         <div className="text-xl text-brown-sub">주인장:</div>
         <div>
           <span className="text-5xl text-brown-main">파브로</span>{" "}
@@ -29,7 +29,7 @@ function MasterPage() {
           <InformationRow title="이메일" description="4up456@gmail.com" />
         </ul>
       </div>
-    </div>
+    </section>
   );
 }
 
