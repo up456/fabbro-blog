@@ -2,14 +2,18 @@
 
 import { Diphylleia } from "next/font/google";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useCallback, useEffect, useState } from "react";
 
 const DEFAULT_STYLE = "";
 const SCROLL_STYLE = "text-white";
 const DIPHYLLEIA = Diphylleia({ subsets: ["latin"], weight: ["400"] });
+const EXCEPTION_PATH = ["/master"];
 
 function Header() {
   const [headerStyle, setHeaderStyle] = useState(DEFAULT_STYLE);
+  const path = usePathname();
+  const isPreventTextColorChange = EXCEPTION_PATH.includes(path);
 
   const handleScroll = useCallback(() => {
     if (window.scrollY < 40) {
@@ -20,9 +24,10 @@ function Header() {
   }, []);
 
   useEffect(() => {
+    if (isPreventTextColorChange) return;
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [handleScroll]);
+  }, [handleScroll, isPreventTextColorChange]);
 
   return (
     <header
