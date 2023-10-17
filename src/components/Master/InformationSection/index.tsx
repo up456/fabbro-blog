@@ -4,7 +4,7 @@ import InformationRow from "./InformationRow";
 
 function InformationSection() {
   return (
-    <div className="lg:absolute lg:top-1/4 lg:left-[13vw] p-7 font-bold z-20">
+    <section className="xl:absolute xl:top-1/4 xl:left-[16.5vw] p-7 font-bold z-20">
       <div className="text-xl text-brown-sub">주인장:</div>
       <div>
         <span className="text-5xl text-brown-main">파브로</span>{" "}
@@ -21,7 +21,7 @@ function InformationSection() {
         <InformationRow title="포지션" description="Front-end" />
         <InformationRow title="이메일" description="4up456@gmail.com" />
       </ul>
-    </div>
+    </section>
   );
 }
 

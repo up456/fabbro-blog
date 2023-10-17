@@ -28,11 +28,14 @@ function CircleCarousel() {
       const distance = i * ITEM_GAP + ITEM_GAP * slot;
       if (distance < 0) {
         balls[i].animate(
-          { opacity: [1, 0] },
+          { opacity: [1, 0], transform: ["translateX(0)", "translateX(-50%)"] },
           { duration: 1000, fill: "both", easing: "ease-in-out" }
         );
       } else {
-        balls[i].animate({ opacity: [1, 1] }, { fill: "both" });
+        balls[i].animate(
+          { opacity: [1, 1], transform: ["translateX(-50%)", "translateX(0)"] },
+          { fill: "both" }
+        );
       }
       balls[i].animate(
         [
