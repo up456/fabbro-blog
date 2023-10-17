@@ -6,13 +6,15 @@ import React from "react";
 function MasterPage() {
   return (
     <section className="bg-[#faf4ef] h-full">
-      <Image
-        className="lg:absolute lg:top-1/2 lg:left-[47vw] lg:transform lg:translate-x-[-50%] lg:translate-y-[-50%] relative mx-auto z-10"
-        src="/images/common/master.png"
-        alt="master"
-        width={332}
-        height={751}
-      />
+      <section>
+        <Image
+          className="xl:absolute xl:top-1/2 xl:left-[47vw] xl:transform xl:translate-x-[-50%] xl:translate-y-[-50%] relative mx-auto z-10"
+          src="/images/common/master.png"
+          alt="master"
+          width={332}
+          height={751}
+        />
+      </section>
       <InformationSection />
       <CircleCarousel />
     </section>
