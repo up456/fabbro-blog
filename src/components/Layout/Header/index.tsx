@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useCallback, useEffect, useState } from "react";
+import ThemeController from "./ThemeController";
 
 const DEFAULT_STYLE = "";
 const SCROLL_STYLE = "text-white";
@@ -40,6 +41,7 @@ function Header() {
         {/* <Link href="/armory">무기고</Link> */}
         {/* <Link href="/posts">게시판</Link> */}
       </nav>
+      <ThemeController />
     </header>
   );
 }
