@@ -30,10 +30,10 @@ function Header() {
 
   return (
     <header
-      className={`font-diphylleia ${headerStyle} sticky top-0 flex justify-between items-center p-4 z-50 duration-300 ease-in`}
+      className={`${headerStyle} sticky inset-0 flex justify-between items-center p-4 z-50 duration-300 ease-in`}
     >
       <Link href="/">
-        <h1 className="text-3xl font-bold">{"파브로 대장간"}</h1>
+        <h1 className="text-3xl font-bold">Fabbro Blog</h1>
       </Link>
       <nav className="flex gap-4">
         {/* <Link href="/master">주인장</Link> */}
