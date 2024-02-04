@@ -15,15 +15,3 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
-html,
-body {
-  height: 100vh;
-}
-
-@media (max-width: 768px) {
-  html,
-  body {
-    height: auto;
-  }
-}
