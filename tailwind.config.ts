@@ -17,6 +17,10 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        diphylleia: ["var(--font-diphylleia)"],
+        "serif-kr": ["var(--font-noto-serif-kr)"],
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

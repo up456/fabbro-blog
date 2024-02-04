@@ -1,13 +1,12 @@
 "use client";
 
-import { Diphylleia } from "next/font/google";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useCallback, useEffect, useState } from "react";
 
 const DEFAULT_STYLE = "";
 const SCROLL_STYLE = "text-white";
-const DIPHYLLEIA = Diphylleia({ subsets: ["latin"], weight: ["400"] });
+
 const EXCEPTION_PATH = ["/master"];
 
 function Header() {
@@ -31,7 +30,7 @@ function Header() {
 
   return (
     <header
-      className={`${DIPHYLLEIA.className} ${headerStyle} sticky top-0 flex justify-between items-center p-4 z-50 duration-300 ease-in`}
+      className={`font-diphylleia ${headerStyle} sticky top-0 flex justify-between items-center p-4 z-50 duration-300 ease-in`}
     >
       <Link href="/">
         <h1 className="text-3xl font-bold">{"파브로 대장간"}</h1>
