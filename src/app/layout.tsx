@@ -1,24 +1,8 @@
-import Header from "@/components/Layout/Header";
 import "./globals.css";
-import type { Metadata } from "next";
-import { Noto_Serif_KR, Diphylleia } from "next/font/google";
-
+import googleFonts from "./google-fonts.config";
+import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
-import clsx from "clsx";
-
-const diphylleia = Diphylleia({
-  subsets: ["latin"],
-  display: "auto",
-  weight: ["400"],
-  variable: "--font-diphylleia",
-});
-
-const notoSerifKr = Noto_Serif_KR({
-  subsets: ["latin"],
-  display: "auto",
-  weight: ["200", "300", "400", "500", "600"],
-  variable: "--font-noto-serif-kr",
-});
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Fabbro 블로그",
@@ -31,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={clsx(notoSerifKr.variable, diphylleia.variable)}>
+    <html lang="ko" className={googleFonts}>
       <body className="flex flex-col max-w-7xl mx-auto">
         <Header />
         <main className="flex-grow">{children}</main>
