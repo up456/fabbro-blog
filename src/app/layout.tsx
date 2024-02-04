@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className={googleFonts}>
-      <body className="flex flex-col max-w-7xl mx-auto">
+      <body className="container mx-auto">
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
